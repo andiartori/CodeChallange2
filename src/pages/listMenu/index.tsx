@@ -6,14 +6,16 @@ import {
 	deleteMenuEntries,
 	addAndPublishMenuEntry,
 } from "@/utils/api";
+import { Entry } from "@/utils/interface";
 import { useState } from "react";
 import Swal from "sweetalert2";
 
-//BUKAN Token, tidak dijadikan env
+// BUKAN Token, tidak dijadikan env
 const spaceId = "77u4ydaftcug";
 const environmentId = "master";
 
-function listMenu() {
+function ListMenu() {
+	// Capitalize the function name
 	const queryClient = useQueryClient();
 
 	const { data, error, isLoading } = useQuery({
@@ -30,7 +32,7 @@ function listMenu() {
 		imageId: "",
 	});
 
-	//Untuk menambahkan ke ContentFul
+	// Untuk menambahkan ke ContentFul
 	const addMenuMutation = useMutation({
 		mutationFn: async () => {
 			const { name, description, price, category, isAvailable, imageId } =
@@ -63,7 +65,7 @@ function listMenu() {
 		},
 	});
 
-	//Untuk Menghapus di Contentful
+	// Untuk Menghapus di Contentful
 	const deleteMenuMutation = useMutation({
 		mutationFn: async (entryId: string) => {
 			return await deleteMenuEntries(entryId, spaceId, environmentId);
@@ -95,8 +97,7 @@ function listMenu() {
 		});
 	};
 
-	//handle input yang ada di FORM
-
+	// handle input yang ada di FORM
 	const handleInputChange = (
 		e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>
 	) => {
@@ -116,7 +117,7 @@ function listMenu() {
 		}
 	};
 
-	//handle input Form submit
+	// handle input Form submit
 	const handleAddMenu = (e: React.FormEvent) => {
 		e.preventDefault();
 		addMenuMutation.mutate();
@@ -220,7 +221,7 @@ function listMenu() {
 					</form>
 				</div>
 
-				{/* TABLE and MAPPING  DIMULAI DARI SINI */}
+				{/* TABLE and MAPPING DIMULAI DARI SINI */}
 				<table className="min-w-full text-black border border-gray-600">
 					<thead>
 						<tr className="bg-black text-white">
@@ -232,7 +233,7 @@ function listMenu() {
 					</thead>
 
 					<tbody>
-						{items?.map((entry: any, index: number) => {
+						{items?.map((entry: Entry, index: number) => {
 							return (
 								<tr
 									key={entry.sys.id}
@@ -263,4 +264,4 @@ function listMenu() {
 	);
 }
 
-export default listMenu;
+export default ListMenu; // Ensure the exported name is also capitalized

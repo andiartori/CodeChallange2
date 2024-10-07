@@ -21,8 +21,8 @@ export interface MarqueeProps {
 }
 
 export interface AboutProps {
-	title: any;
-	about?: any;
+	title: string;
+	about?: string;
 	image?: string;
 	onClick?: () => void;
 }
@@ -48,12 +48,63 @@ export interface MenuProps {
 
 export interface UserData {
 	name: {
-	  first: string;
-	  last: string;
+		first: string;
+		last: string;
 	};
 	picture: {
-	  large: string;
+		large: string;
 	};
 	email: string;
-  }
-  
+}
+
+export interface Entry {
+	sys: {
+		id: string;
+	};
+	fields: {
+		name: string;
+		description: string;
+		price: number;
+	};
+}
+
+//This is interface corelated to menu
+
+export interface EntryFields {
+	name: string;
+	description: string;
+	price: number;
+	category: string[];
+	image: {
+		sys: {
+			id: string;
+		};
+	};
+}
+
+export interface AssetFields {
+	file: {
+		url: string;
+	};
+}
+
+export interface Asset {
+	sys: {
+		id: string;
+	};
+	fields: AssetFields;
+}
+
+export interface EntryA {
+	sys: {
+		id: string;
+	};
+	fields: EntryFields;
+}
+
+export interface Data {
+	items: Entry[];
+	includes: {
+		Asset: Asset[];
+	};
+}

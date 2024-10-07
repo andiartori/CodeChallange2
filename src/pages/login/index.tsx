@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
+import React, { FormEvent } from "react"
 
 export default function Login() {
 	const router = useRouter();
@@ -7,7 +8,7 @@ export default function Login() {
 	const [error, setError] = useState("");
 	const [isSuccess, setIsSuccess] = useState(false);
 
-	const handleLogin = (e: any) => {
+	const handleLogin = (e: FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
 		if (password === "admin") {
 			setIsSuccess(true);

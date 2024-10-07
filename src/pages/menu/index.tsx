@@ -4,6 +4,7 @@ import FooterComponent from "@/components/FooterComponent";
 import CardMenu from "@/components/CardMenu";
 import { useQuery } from "@tanstack/react-query";
 import { getAllEntries } from "@/utils/api";
+import { EntryFields, EntryA, Asset, Data } from "@/utils/interface";
 
 const spaceId = "77u4ydaftcug";
 const environmentId = "master";
@@ -30,12 +31,12 @@ function Menu() {
 	}
 
 	const coffeeItems =
-		data?.items?.filter((entry: any) =>
+		data?.items?.filter((entry: EntryA) =>
 			entry.fields.category.includes("coffee")
 		) || [];
 
 	const sweetItems =
-		data?.items?.filter((entry: any) =>
+		data?.items?.filter((entry: EntryA) =>
 			entry.fields.category.includes("sweet")
 		) || [];
 
@@ -60,9 +61,9 @@ function Menu() {
 				</div>
 			</div>
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 mx-10">
-				{coffeeItems.map((entry: any) => {
+				{coffeeItems.map((entry: EntryA) => {
 					const asset = data.includes.Asset.find(
-						(a: any) => a.sys.id === entry.fields.image.sys.id
+						(a: Asset) => a.sys.id === entry.fields.image.sys.id
 					);
 					const imageUrl = asset?.fields?.file?.url
 						? `https:${asset.fields.file.url}`
@@ -87,9 +88,9 @@ function Menu() {
 			</div>
 
 			<div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-10 mx-10">
-				{sweetItems.map((entry: any) => {
+				{sweetItems.map((entry: EntryA) => {
 					const asset = data.includes.Asset.find(
-						(a: any) => a.sys.id === entry.fields.image.sys.id
+						(a: Asset) => a.sys.id === entry.fields.image.sys.id
 					);
 					const imageUrl = asset?.fields?.file?.url
 						? `https:${asset.fields.file.url}`
