@@ -21,7 +21,7 @@ export interface MarqueeProps {
 }
 
 export interface AboutProps {
-	title: string;
+	title: string | JSX.Element;
 	about?: string;
 	image?: string;
 	onClick?: () => void;
