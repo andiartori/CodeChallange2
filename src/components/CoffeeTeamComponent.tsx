@@ -1,6 +1,7 @@
 import React from "react";
 import { useQuery } from "@tanstack/react-query";
 import { getTeams } from "@/utils/api";
+import { UserData } from "@/utils/interface";
 
 function CoffeeTeamComponent() {
 	const { data, error, isLoading } = useQuery({
@@ -28,7 +29,7 @@ function CoffeeTeamComponent() {
 	return (
 		<div>
 			<div className="flex-col items-center justify-center text-black text-justify text-xl ">
-				{data?.results?.map((data: any, index: number) => (
+				{data?.results?.map((data: UserData, index: number) => (
 					<div key={index} className="leading-relaxed my-6">
 						{/* Display the image */}
 						<p className="inline-flex items-center mb-4 text-black">

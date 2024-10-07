@@ -1,6 +1,5 @@
 import React from "react";
 import { AboutProps } from "@/utils/interface";
-import { useRouter } from "next/router";
 
 function About({ title, about }: AboutProps) {
 

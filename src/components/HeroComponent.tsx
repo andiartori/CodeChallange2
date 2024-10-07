@@ -11,7 +11,7 @@ function HeroComponent({ image1, image2, image3 }: HeroProps) {
 			>
 				<div className="w-60 md:w-2/5 my-5 bg-white rounded p-2">
 					<h1 className="text-xl md:text-3xl font-bold p-1">
-						"The Best Coffee and Sweets in Town"
+						&quot;The Best Coffee and Sweets in Town&quot;
 					</h1>
 				</div>
 			</div>

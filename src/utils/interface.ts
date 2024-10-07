@@ -47,3 +47,15 @@ export interface MenuProps {
 	description: string;
 	price: number;
 }
+
+export interface UserData {
+	name: {
+	  first: string;
+	  last: string;
+	};
+	picture: {
+	  large: string;
+	};
+	email: string;
+  }
+  

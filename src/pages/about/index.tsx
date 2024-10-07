@@ -2,7 +2,6 @@ import React from "react";
 import NavbarComponent from "@/components/NavbarComponent";
 import OpeningLeft from "@/components/OpeningLeft";
 import { useRouter } from "next/router";
-import { useState } from "react";
 
 import FooterComponent from "@/components/FooterComponent";
 
@@ -68,7 +67,7 @@ function About() {
 								a few heirloom recipes passed down through generations, he
 								traveled across continents, discovering the finest coffee beans
 								in remote plantations. Along the way, he learned the art of
-								roasting, blending, and brewing from the local coffee masters."
+								roasting, blending, and brewing from the local coffee masters.
 							</p>
 
 							<h2 className="mt-44 text-2xl">SLIDE TO RIGHT TO KNOW MORE!</h2>
@@ -144,7 +143,7 @@ function About() {
 							<p className="text-l text-justify mr-20">
 								In 2024, founding again the books of journey from Barbara and
 								its her ancestors, Eren son, Horus, change again to its roots
-								and making the Coffee and Sweets opening until now.{" "}
+								and making the Coffee and Sweets opening until now.
 							</p>
 							<a href="#leader">
 								<h2 className="hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 m-3 p-2 flex justify-center">
