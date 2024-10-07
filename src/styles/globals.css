@@ -2,7 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+html {
+	scroll-behavior: smooth;
+	height: 100%;
+}
+
+a.active {
+	background-color: red;
+}
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
 }
@@ -24,4 +32,4 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-}
+} */
