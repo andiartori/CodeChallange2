@@ -12,7 +12,7 @@ function OpeningRight({ image, about, title }: AboutProps) {
 
 				{/* Image container with relative positioning */}
 				<div className="relative w-full md:w-2/4 text-black">
-					<img className="md:object-cover w-full h-full" src={image} alt="" />
+					<img className="md:object-cover w-full h-full" src={image} alt="No Image Loaded" />
 
 					{/* Coffee text positioned on top of the image */}
 					<p className="absolute top-4 left-4 text-white text-6xl">{title}</p>

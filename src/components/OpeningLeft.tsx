@@ -7,7 +7,7 @@ function OpeningLeft({ title, about, image }: AboutProps) {
 			<div className="flex flex-col md:flex-row text-white gap-5">
 				{/* Image container with relative positioning */}
 				<div className="relative w-full md:w-2/4 text-black">
-					<img className=" md:object-cover w-full h-full" src={image} alt="" />
+					<img className=" md:object-cover w-full h-full" src={image} alt=" No Image Loaded" />
 
 					{/* Coffee text positioned on top of the image */}
 					<p className="absolute top-4 left-4 text-white text-4xl md:text-6xl">

@@ -1,5 +1,6 @@
 import React from "react";
 import NavbarComponent from "@/components/NavbarComponent";
+import Header from "@/components/Header";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import {
 	getAllEntries,
@@ -134,133 +135,142 @@ function ListMenu() {
 	const items = data?.items || [];
 
 	return (
-		<div>
-			<div className="mt-8 md:mt-0">
-				<NavbarComponent
-					home="Home"
-					about="About"
-					teams="Teams"
-					ourMenus="OurMenus"
-					title="「C  o  f  f  e  e  /  S  w  e  e  t  s」  "
-					contact="reserved"
-				/>
-			</div>
-
-			{/* TABLE INPUT DASHBOARD DIMULAI DARI SINI */}
-
-			<div className="container mx-auto p-8 bg-white">
-				<h1 className="text-2xl font-bold mb-6 ">Welcome Pak Horus</h1>
-				<div className="mb-4">
-					<h2 className="text-xl font-bold mb-4">Add New Menu</h2>
-					<form
-						onSubmit={handleAddMenu}
-						className="grid grid-cols-2 gap-4 mb-8"
-					>
-						<input
-							type="text"
-							name="name"
-							value={newMenu.name}
-							onChange={handleInputChange}
-							placeholder="Name"
-							required
-							className="border border-gray-400 p-2 rounded"
-						/>
-						<input
-							type="text"
-							name="description"
-							value={newMenu.description}
-							onChange={handleInputChange}
-							placeholder="Description"
-							required
-							className="border border-gray-400 p-2 rounded"
-						/>
-						<input
-							type="number"
-							name="price"
-							value={newMenu.price}
-							onChange={handleInputChange}
-							placeholder="Price"
-							required
-							className="border border-gray-400 p-2 rounded"
-						/>
-						<input
-							type="text"
-							name="imageId"
-							value={newMenu.imageId}
-							onChange={handleInputChange}
-							placeholder="Image ID"
-							required
-							className="border border-gray-400 p-2 rounded"
-						/>
-						<select
-							name="category"
-							value={newMenu.category}
-							onChange={handleInputChange}
-							className="border border-gray-400 p-2 rounded"
-						>
-							<option value="coffee">Coffee</option>
-							<option value="sweet">Sweet</option>
-							<option value="others">Others</option>
-						</select>
-						<label className="flex items-center">
-							<input
-								type="checkbox"
-								name="isAvailable"
-								checked={newMenu.isAvailable}
-								onChange={handleInputChange}
-								className="mr-2"
-							/>
-							Is Available
-						</label>
-						<button
-							type="submit"
-							className="col-span-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
-						>
-							Add Menu
-						</button>
-					</form>
+		<>
+			<Header>
+				<title>LIST MENU </title>
+			</Header>
+			<div>
+				<div className="mt-8 md:mt-0">
+					<NavbarComponent
+						home="Home"
+						about="About"
+						teams="Teams"
+						ourMenus="OurMenus"
+						title="「C  o  f  f  e  e  /  S  w  e  e  t  s」  "
+						contact="reserved"
+					/>
 				</div>
 
-				{/* TABLE and MAPPING DIMULAI DARI SINI */}
-				<table className="min-w-full text-black border border-gray-600">
-					<thead>
-						<tr className="bg-black text-white">
-							<th className="py-3 px-6 text-left">name</th>
-							<th className="py-3 px-6 text-left">description</th>
-							<th className="py-3 px-6 text-left">Price</th>
-							<th className="py-3 px-6 text-left">Edit</th>
-						</tr>
-					</thead>
+				{/* TABLE INPUT DASHBOARD DIMULAI DARI SINI */}
 
-					<tbody>
-						{items?.map((entry: Entry, index: number) => {
-							return (
-								<tr
-									key={entry.sys.id}
-									className={`border-b border-gray-200 text-gret-700 ${
-										index % 2 === 0 ? "bg-gray-100" : "bg-gray-400"
-									}`}
-								>
-									<td className="py-3 px-6 text-left ">{entry.fields.name}</td>
-									<td className="py-3 px-6 text-left ">
-										{entry.fields.description}
-									</td>
-									<td className="py-3 px-6 text-left ">{entry.fields.price}</td>
-									<td className="py-3 px-6 text-center">
-										<button
-											className="mx-2 py-2 px-4 bg-red-500 text-white rounded-md hover:bg-red-700"
-											onClick={() => handleDelete(entry.sys.id)}
-										>
-											Delete
-										</button>
-									</td>
-								</tr>
-							);
-						})}
-					</tbody>
-				</table>
+				<div className="container mx-auto p-8 bg-white">
+					<h1 className="text-2xl font-bold mb-6 ">Welcome Pak Horus</h1>
+					<div className="mb-4">
+						<h2 className="text-xl font-bold mb-4">Add New Menu</h2>
+						<form
+							onSubmit={handleAddMenu}
+							className="grid grid-cols-2 gap-4 mb-8"
+						>
+							<input
+								type="text"
+								name="name"
+								value={newMenu.name}
+								onChange={handleInputChange}
+								placeholder="Name"
+								required
+								className="border border-gray-400 p-2 rounded"
+							/>
+							<input
+								type="text"
+								name="description"
+								value={newMenu.description}
+								onChange={handleInputChange}
+								placeholder="Description"
+								required
+								className="border border-gray-400 p-2 rounded"
+							/>
+							<input
+								type="number"
+								name="price"
+								value={newMenu.price}
+								onChange={handleInputChange}
+								placeholder="Price"
+								required
+								className="border border-gray-400 p-2 rounded"
+							/>
+							<input
+								type="text"
+								name="imageId"
+								value={newMenu.imageId}
+								onChange={handleInputChange}
+								placeholder="Image ID"
+								required
+								className="border border-gray-400 p-2 rounded"
+							/>
+							<select
+								name="category"
+								value={newMenu.category}
+								onChange={handleInputChange}
+								className="border border-gray-400 p-2 rounded"
+							>
+								<option value="coffee">Coffee</option>
+								<option value="sweet">Sweet</option>
+								<option value="others">Others</option>
+							</select>
+							<label className="flex items-center">
+								<input
+									type="checkbox"
+									name="isAvailable"
+									checked={newMenu.isAvailable}
+									onChange={handleInputChange}
+									className="mr-2"
+								/>
+								Is Available
+							</label>
+							<button
+								type="submit"
+								className="col-span-2 bg-blue-500 text-white p-2 rounded hover:bg-blue-600"
+							>
+								Add Menu
+							</button>
+						</form>
+					</div>
+
+					{/* TABLE and MAPPING DIMULAI DARI SINI */}
+					<table className="min-w-full text-black border border-gray-600">
+						<thead>
+							<tr className="bg-black text-white">
+								<th className="py-3 px-6 text-left">name</th>
+								<th className="py-3 px-6 text-left">description</th>
+								<th className="py-3 px-6 text-left">Price</th>
+								<th className="py-3 px-6 text-left">Edit</th>
+							</tr>
+						</thead>
+
+						<tbody>
+							{items?.map((entry: Entry, index: number) => {
+								return (
+									<tr
+										key={entry.sys.id}
+										className={`border-b border-gray-200 text-gret-700 ${
+											index % 2 === 0 ? "bg-gray-100" : "bg-gray-400"
+										}`}
+									>
+										<td className="py-3 px-6 text-left ">
+											{entry.fields.name}
+										</td>
+										<td className="py-3 px-6 text-left ">
+											{entry.fields.description}
+										</td>
+										<td className="py-3 px-6 text-left ">
+											{entry.fields.price}
+										</td>
+										<td className="py-3 px-6 text-center">
+											<button
+												className="mx-2 py-2 px-4 bg-red-500 text-white rounded-md hover:bg-red-700"
+												onClick={() => handleDelete(entry.sys.id)}
+											>
+												Delete
+											</button>
+										</td>
+									</tr>
+								);
+							})}
+						</tbody>
+					</table>
+				</div>
 			</div>
-		</div>
+		</>
 	);
 }
 
