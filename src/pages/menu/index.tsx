@@ -72,8 +72,8 @@ function Menu() {
 
 					return (
 						<Suspense fallback={<div>Loading Data ... </div>}>
+							key={entry.sys.id}
 							<CardMenu
-								key={entry.sys.id}
 								image={imageUrl}
 								name={entry.fields.name}
 								description={entry.fields.description}
@@ -101,8 +101,8 @@ function Menu() {
 
 					return (
 						<Suspense fallback={<div>Loading Data ... </div>}>
+							key={entry.sys.id}
 							<CardMenu
-								key={entry.sys.id}
 								image={imageUrl}
 								name={entry.fields.name}
 								description={entry.fields.description}

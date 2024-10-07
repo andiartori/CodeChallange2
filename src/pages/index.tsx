@@ -103,8 +103,8 @@ function HomePage() {
 							{dataReview.map((data: ReviewerProps, index: number) => {
 								return (
 									<Suspense fallback={<div>Loading...</div>}>
+										key={index}
 										<TestimonialCards
-											key={index}
 											name={data.name}
 											text={data.text}
 											reviewerPhoto={data.reviewerPhoto}
