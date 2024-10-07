@@ -25,7 +25,7 @@ function FooterComponent() {
 
 			{/* Copyright */}
 			<div className="text-center mt-8 border-t border-gray-700 pt-4">
-				<p>&copy; 2024 Coffee/Sweets. All rights reserved.</p>
+				<p>&copy; 2024 Coffee/Sweets. All rights reserved Ver.0.0.1</p>
 			</div>
 		</footer>
 	);

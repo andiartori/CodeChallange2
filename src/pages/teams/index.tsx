@@ -1,8 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import NavbarComponent from "@/components/NavbarComponent";
-import CoffeeTeamComponent from "@/components/CoffeeTeamComponent";
-import SweetTeamComponent from "@/components/SweetTeamComponent";
 import FooterComponent from "@/components/FooterComponent";
+const CoffeeTeamComponent = React.lazy(
+	() => import("@/components/CoffeeTeamComponent")
+);
+const SweetTeamComponent = React.lazy(
+	() => import("@/components/SweetTeamComponent")
+);
 
 function Teams() {
 	return (
@@ -43,7 +47,9 @@ function Teams() {
 						/>
 					</div>
 					<div className="ml-6 md:row-span-2 mr-56">
-						<CoffeeTeamComponent />
+						<Suspense fallback={<div>Loading Data</div>}>
+							<CoffeeTeamComponent />
+						</Suspense>
 					</div>
 				</div>
 			</div>
@@ -60,7 +66,9 @@ function Teams() {
 						/>
 					</div>
 					<div className="ml-6 md:row-span-2 mr-56">
-						<SweetTeamComponent />
+						<Suspense fallback={<div>Loading Data</div>}>
+							<SweetTeamComponent />
+						</Suspense>
 					</div>
 				</div>
 			</div>

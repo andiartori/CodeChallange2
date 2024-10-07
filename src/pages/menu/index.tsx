@@ -1,13 +1,14 @@
-import React from "react";
+import React, { Suspense } from "react";
 import NavbarComponent from "@/components/NavbarComponent";
 import FooterComponent from "@/components/FooterComponent";
-import CardMenu from "@/components/CardMenu";
 import { useQuery } from "@tanstack/react-query";
 import { getAllEntries } from "@/utils/api";
 import { EntryA, Asset } from "@/utils/interface";
 
 const spaceId = "77u4ydaftcug";
 const environmentId = "master";
+
+const CardMenu = React.lazy(() => import("@/components/CardMenu"));
 
 function Menu() {
 	const { data, error, isLoading } = useQuery({
@@ -70,13 +71,15 @@ function Menu() {
 						: "";
 
 					return (
-						<CardMenu
-							key={entry.sys.id}
-							image={imageUrl}
-							name={entry.fields.name}
-							description={entry.fields.description}
-							price={entry.fields.price}
-						/>
+						<Suspense fallback={<div>Loading Data ... </div>}>
+							<CardMenu
+								key={entry.sys.id}
+								image={imageUrl}
+								name={entry.fields.name}
+								description={entry.fields.description}
+								price={entry.fields.price}
+							/>
+						</Suspense>
 					);
 				})}
 			</div>
@@ -97,13 +100,15 @@ function Menu() {
 						: "";
 
 					return (
-						<CardMenu
-							key={entry.sys.id}
-							image={imageUrl}
-							name={entry.fields.name}
-							description={entry.fields.description}
-							price={entry.fields.price}
-						/>
+						<Suspense fallback={<div>Loading Data ... </div>}>
+							<CardMenu
+								key={entry.sys.id}
+								image={imageUrl}
+								name={entry.fields.name}
+								description={entry.fields.description}
+								price={entry.fields.price}
+							/>
+						</Suspense>
 					);
 				})}
 			</div>

@@ -1,16 +1,17 @@
-import React from "react";
+import React, { Suspense } from "react";
 import NavbarComponent from "@/components/NavbarComponent";
-import OpeningLeft from "@/components/OpeningLeft";
+
 import { useRouter } from "next/router";
 
 import FooterComponent from "@/components/FooterComponent";
+
+const OpeningLeft = React.lazy(() => import("@/components/OpeningLeft"));
 
 function About() {
 	const router = useRouter();
 	function toTeams() {
 		router.push({ pathname: "/teams" });
 	}
-
 
 	return (
 		<div>
@@ -127,9 +128,9 @@ function About() {
 							/>
 							<h3 className=" text-3xl mt-5">2005</h3>
 							<p className="text-l text-justify mr-20">
-								In 2005, Eren Schreader, Christoph Jr.s son, decided it was
-								time to breathe new life into the old family building. Growing
-								up, Eren had heard countless stories about the legacy of
+								In 2005, Eren Schreader, Christoph Jr.s son, decided it was time
+								to breathe new life into the old family building. Growing up,
+								Eren had heard countless stories about the legacy of
 								Coffee&Sweets from his father and grandfather. hence opening
 								eren & drinken
 							</p>
@@ -162,21 +163,24 @@ function About() {
 			</div>
 
 			<div className=" m-0 md:m-20 h-auto object-fill overflow-hidden">
-				<OpeningLeft
-					title={
-						<span>
-							Mr. H
-							<span
-								onClick={() => router.push('/login')} className="cursor-pointer"
-							>
-								o
+				<Suspense fallback={<div>Loading...</div>}>
+					<OpeningLeft
+						title={
+							<span>
+								Mr. H
+								<span
+									onClick={() => router.push("/login")}
+									className="cursor-pointer"
+								>
+									o
+								</span>
+								rus
 							</span>
-							rus
-						</span>
-					}
-					about="Horus Schreader is the dynamic and visionary force behind the success of Eren & Drinken, the café-bar hybrid that has redefined the Schreader family legacy. A natural leader with a keen eye for business and innovation, Horus is known for his ability to merge tradition with modern trends. He brings a unique energy to the business, driving it forward with a deep respect for his family's rich history in coffee and an unwavering dedication to creating a space where people can connect and unwind."
-					image="https://images.unsplash.com/photo-1705609036922-ec7c4fe4960b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-				/>
+						}
+						about="Horus Schreader is the dynamic and visionary force behind the success of Eren & Drinken, the café-bar hybrid that has redefined the Schreader family legacy. A natural leader with a keen eye for business and innovation, Horus is known for his ability to merge tradition with modern trends. He brings a unique energy to the business, driving it forward with a deep respect for his family's rich history in coffee and an unwavering dedication to creating a space where people can connect and unwind."
+						image="https://images.unsplash.com/photo-1705609036922-ec7c4fe4960b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+					/>
+				</Suspense>
 				<div className="flex justify-end mx-10">
 					<button onClick={toTeams}>
 						<h2 className="hover:-translate-y-1 hover:scale-110 hover:bg-slate-500 duration-300 m-3 p-2 flex justify-center text-2xl">
