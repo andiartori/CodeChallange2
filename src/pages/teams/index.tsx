@@ -22,10 +22,10 @@ function Teams() {
 					<div className="text-3xl sm:text-4xl">Meet Our Barista & Chefs</div>
 					<div className="text-lg sm:text-xl mt-5 sm:mt-10 mx-5 sm:mx-4">
 						<p>
-							"Our Barista & chef has more than 10 years of experience making
+							Our Barista & chef has more than 10 years of experience making
 							coffee, crafting each cup with precision and passion. Together,
 							they ensure that every visit to Coffee & Sweets is not just a
-							treat for the taste buds, but a moment to savor and enjoy."
+							treat for the taste buds, but a moment to savor and enjoy.
 						</p>
 					</div>
 				</div>

@@ -127,7 +127,7 @@ function About() {
 							/>
 							<h3 className=" text-3xl mt-5">2005</h3>
 							<p className="text-l text-justify mr-20">
-								"In 2005, Eren Schreader, Christoph Jr.'s son, decided it was
+								In 2005, Eren Schreader, Christoph Jr.s son, decided it was
 								time to breathe new life into the old family building. Growing
 								up, Eren had heard countless stories about the legacy of
 								Coffee&Sweets from his father and grandfather. hence opening

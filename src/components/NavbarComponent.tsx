@@ -13,7 +13,7 @@ function NavbarComponent({ home, about, teams, ourMenus, title }: NavProps) {
 	}
 
 	function toHome() {
-		router.push({ pathname: "/home" });
+		router.push({ pathname: "/" });
 		setIsOpen(false); // Close menu after clicking
 	}
 

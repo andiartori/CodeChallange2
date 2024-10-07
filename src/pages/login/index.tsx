@@ -1,5 +1,5 @@
 import { useRouter } from "next/router";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 export default function Login() {
 	const router = useRouter();
@@ -50,7 +50,7 @@ export default function Login() {
 					className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4"
 				>
 					<h1 className="mb-4 text-xl">
-						"Welcome Mr. Horus, may I have your password?"
+						Welcome Mr. Horus, may I have your password?
 					</h1>
 					<div className="mb-4">
 						<input

@@ -55,11 +55,11 @@ function HomePage() {
 				<div className="w-full md:w-1/2 mr-0 md:mr-16 flex flex-col items-center mt-10 mb-20 text-justify">
 					<div className="text-3xl md:text-4xl mb-10">What are we selling?</div>
 					<div className="text-lg mx-5 md:text-xl mt-10">
-						"We are selling the best freshly made coffee and sweet bread or cake
-						with dedicated attention to quality and taste. Whether you're here
+						We are selling the best freshly made coffee and sweet bread or cake
+						with dedicated attention to quality and taste. Whether youre here
 						for a morning pick-me-up or an afternoon treat, our cozy atmosphere
 						and delicious offerings make Coffee&Sweets the perfect spot to relax
-						and indulge."
+						and indulge.
 					</div>
 				</div>
 			</div>

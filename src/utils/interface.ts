@@ -1,5 +1,3 @@
-import React from "react";
-
 //HOME PAGE RELATED
 
 export interface NavProps {
