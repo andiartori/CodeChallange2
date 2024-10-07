@@ -1,14 +1,8 @@
 import React from "react";
 import { AboutProps } from "@/utils/interface";
 import { useRouter } from "next/router";
-import { FaCoffee } from "react-icons/fa";
 
 function About({ title, about }: AboutProps) {
-	const router = useRouter();
-
-	function toAbout() {
-		router.push({ pathname: "/about" });
-	}
 
 	return (
 		<div className="flex flex-col items-center mt-10 mb-20 text-justify bg-white w-full">
