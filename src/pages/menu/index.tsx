@@ -71,8 +71,10 @@ function Menu() {
 						: "";
 
 					return (
-						<Suspense fallback={<div>Loading Data ... </div>}>
+						<Suspense
 							key={entry.sys.id}
+							fallback={<div>Loading Data ... </div>}
+						>
 							<CardMenu
 								image={imageUrl}
 								name={entry.fields.name}
@@ -100,8 +102,10 @@ function Menu() {
 						: "";
 
 					return (
-						<Suspense fallback={<div>Loading Data ... </div>}>
+						<Suspense
 							key={entry.sys.id}
+							fallback={<div>Loading Data ... </div>}
+						>
 							<CardMenu
 								image={imageUrl}
 								name={entry.fields.name}

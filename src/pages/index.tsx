@@ -102,8 +102,8 @@ function HomePage() {
 						<div className="className= grid grid-cols-1 md:grid-cols-3 gap-6">
 							{dataReview.map((data: ReviewerProps, index: number) => {
 								return (
-									<Suspense fallback={<div>Loading...</div>}>
-										key={index}
+									<Suspense key={index} fallback={<div>Loading...</div>}>
+										
 										<TestimonialCards
 											name={data.name}
 											text={data.text}
