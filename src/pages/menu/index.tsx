@@ -4,7 +4,7 @@ import FooterComponent from "@/components/FooterComponent";
 import CardMenu from "@/components/CardMenu";
 import { useQuery } from "@tanstack/react-query";
 import { getAllEntries } from "@/utils/api";
-import { EntryFields, EntryA, Asset, Data } from "@/utils/interface";
+import { EntryA, Asset } from "@/utils/interface";
 
 const spaceId = "77u4ydaftcug";
 const environmentId = "master";
