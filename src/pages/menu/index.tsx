@@ -20,10 +20,7 @@ function Menu() {
 	if (isLoading) {
 		return (
 			<div className="flex justify-center items-center h-screen">
-				<img
-					src="https://cdn.dribbble.com/users/637635/screenshots/5745012/loading.gif"
-					alt="Loading..."
-				/>
+				<img src="/Loading-min.gif" alt="Loading..." />
 			</div>
 		);
 	}
@@ -45,7 +42,7 @@ function Menu() {
 	return (
 		<>
 			<Header>
-				<title>OUR MENUS</title>
+				<title>COFFEESWEET-MENU</title>
 			</Header>
 			<div>
 				<div>

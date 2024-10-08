@@ -18,7 +18,7 @@ function HomePage() {
 	return (
 		<>
 			<Header>
-				<title>HOME</title>
+				<title>COFFEESWEET-HOME</title>
 			</Header>
 			<div>
 				{/* //NAVBAR */}
@@ -38,9 +38,9 @@ function HomePage() {
 				<div className="mx-0 md:mx-14 my-1.5">
 					<Suspense fallback={<div>Loading...</div>}>
 						<HeroComponent
-							image1="https://images.unsplash.com/photo-1525610553991-2bede1a236e2?q=80&w=1740&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							image2="https://images.unsplash.com/photo-1609132689075-5d495dfa24d7?q=80&w=1664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-							image3="https://images.unsplash.com/photo-1522336849566-02cbb8bffc4c?q=80&w=1742&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							image1="PhotoHero1_1_11zon.jpg"
+							image2="PhotoHero2_2_11zon.jpg"
+							image3="PhotoHero3_3_11zon.jpg"
 						/>
 					</Suspense>
 					{/* Marquee */}
@@ -81,7 +81,7 @@ function HomePage() {
 							<OpeningLeft
 								title="COFFEE"
 								about="Coffee is a popular beverage made from roasted coffee beans, primarily due to its caffeine content. Coffee is also celebrated for its role in social interactions and as a cultural experience worldwide."
-								image="https://images.unsplash.com/photo-1488667499475-42a530fab02b?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								image="leftOpeningHome_5_11zon.jpg"
 							/>
 						</Suspense>
 					</div>
@@ -92,7 +92,7 @@ function HomePage() {
 							<OpeningRight
 								title="SWEETS"
 								about="Sweet bread is a delightful baked good made from a dough enriched with sugar, butter, and sometimes milk or eggs, creating a soft, fluffy texture and a subtly sweet flavor. Loved for its versatility,making it a cherished part of cultural and culinary traditions worldwide."
-								image="https://images.unsplash.com/photo-1533893057902-dbc94f18f01f?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+								image="rightOpeningHome_4_11zon.jpg"
 							/>
 						</Suspense>
 					</div>

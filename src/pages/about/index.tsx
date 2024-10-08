@@ -14,7 +14,7 @@ function About() {
 	return (
 		<>
 			<Header>
-				<title>ABOUT</title>
+				<title>COFFEESWEET-ABOUT</title>
 			</Header>
 			<div>
 				<div className="mt-8 md:mt-0">
@@ -59,7 +59,7 @@ function About() {
 						<div className="flex space-x-4 ">
 							<div className=" snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-5 hover:-translate-y-1 ">
 								<img
-									src="https://plus.unsplash.com/premium_photo-1667239420580-e4ded4d0fb53?q=80&w=1608&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+									src="About1_1_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-cover hover:scale-110 ease-in duration-300"
 								/>
@@ -81,7 +81,7 @@ function About() {
 
 							<div className="snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-5 ">
 								<img
-									src="https://images.unsplash.com/photo-1578593140012-b26d2bf0d8a6?q=80&w=1579&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+									src="About2_2_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-cover hover:scale-110 ease-in duration-300"
 								/>
@@ -98,7 +98,7 @@ function About() {
 							</div>
 							<div className="snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-5">
 								<img
-									src="https://images.unsplash.com/photo-1722635044899-5a48fa65117f?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+									src="About3_3_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-cover hover:scale-110 ease-in duration-300 "
 								/>
@@ -115,7 +115,7 @@ function About() {
 							</div>
 							<div className="snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-10">
 								<img
-									src="https://images.unsplash.com/photo-1716321934515-09bee7d6acbd?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ODAncyUyMHJlc3RhdXJhbnR8ZW58MHx8MHx8fDA%3D"
+									src="About4_4_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-fit hover:scale-110 ease-in duration-300 "
 								/>
@@ -132,7 +132,7 @@ function About() {
 							</div>
 							<div className="snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-10">
 								<img
-									src="https://images.unsplash.com/photo-1523368749929-6b2bf370dbf8?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+									src="About5_5_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-cover hover:scale-110 ease-in duration-300"
 								/>
@@ -147,7 +147,7 @@ function About() {
 							</div>
 							<div className="snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-10">
 								<img
-									src="https://images.unsplash.com/photo-1515860734122-e0d771b36d3e?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+									src="About6_6_11zon.jpg"
 									alt="No IMAGE LOADED"
 									className="w-[300px] h-[200] object-cover hover:scale-110 ease-in duration-300"
 								/>
@@ -189,7 +189,7 @@ function About() {
 								</span>
 							}
 							about="Horus Schreader is the dynamic and visionary force behind the success of Eren & Drinken, the café-bar hybrid that has redefined the Schreader family legacy. A natural leader with a keen eye for business and innovation, Horus is known for his ability to merge tradition with modern trends. He brings a unique energy to the business, driving it forward with a deep respect for his family's rich history in coffee and an unwavering dedication to creating a space where people can connect and unwind."
-							image="https://images.unsplash.com/photo-1705609036922-ec7c4fe4960b?q=80&w=1587&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+							image="AboutHorus_7_11zon.jpg"
 						/>
 					</Suspense>
 					<div className="flex justify-end mx-10">

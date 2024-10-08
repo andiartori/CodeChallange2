@@ -4,27 +4,27 @@ import { useRouter } from "next/router";
 import { HiMenu, HiX } from "react-icons/hi"; // Import menu and close icons
 
 function NavbarComponent({ home, about, teams, ourMenus, title }: NavProps) {
-	const [isOpen, setIsOpen] = useState(false); // To toggle the menu visibility
+	const [isOpen, setIsOpen] = useState(false);
 	const router = useRouter();
 
 	function toAbout() {
 		router.push({ pathname: "/about" });
-		setIsOpen(false); // Close menu after clicking
+		setIsOpen(false);
 	}
 
 	function toHome() {
 		router.push({ pathname: "/" });
-		setIsOpen(false); // Close menu after clicking
+		setIsOpen(false);
 	}
 
 	function toTeams() {
 		router.push({ pathname: "/teams" });
-		setIsOpen(false); // Close menu after clicking
+		setIsOpen(false);
 	}
 
 	function toOurMenus() {
 		router.push({ pathname: "/menu" });
-		setIsOpen(false); // Close menu after clicking
+		setIsOpen(false);
 	}
 
 	// Toggle the burger menu
@@ -87,25 +87,25 @@ function NavbarComponent({ home, about, teams, ourMenus, title }: NavProps) {
 					<div className="flex flex-col gap-1 px-6 py-4 text-xl items-center ">
 						<button
 							onClick={toHome}
-							className="text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
+							className="w-screen text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
 						>
 							{home}
 						</button>
 						<button
 							onClick={toAbout}
-							className="text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
+							className="w-screen text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
 						>
 							{about}
 						</button>
 						<button
 							onClick={toTeams}
-							className="text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
+							className="w-screen text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
 						>
 							{teams}
 						</button>
 						<button
 							onClick={toOurMenus}
-							className="text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
+							className="w-screen text-gray-600 px-4 py-2 bg-white hover:text-white hover:bg-amber-950 duration-500"
 						>
 							{ourMenus}
 						</button>

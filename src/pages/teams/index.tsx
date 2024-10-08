@@ -13,7 +13,7 @@ function Teams() {
 	return (
 		<>
 			<Header>
-				<title>TEAMS</title>
+				<title>COFFEESWEET-TEAMS</title>
 			</Header>
 			<div>
 				<div className="mt-8 md:mt-0">
@@ -43,9 +43,9 @@ function Teams() {
 				<div className="ml-0 md:ml-56 mb-10">
 					<div className=" grid-cols-1 md:grid md:grid-cols-2 grid-rows-2 gap-4">
 						<div className="  md:row-span-2">
-							<h4 className="absolute text-2xl m-5 p-2 text-black bg-white">
+							<h1 className="absolute text-2xl m-5 p-2 text-black bg-white">
 								BARISTA
-							</h4>
+							</h1>
 							<img
 								src="https://images.unsplash.com/photo-1513430698680-03ff4d6be961?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzB8fGJhcmlzdGF8ZW58MHx8MHx8fDA%3D"
 								alt="Barista"
@@ -62,9 +62,9 @@ function Teams() {
 				<div className="ml-0 md:ml-56">
 					<div className=" grid-cols-1 md:grid md:grid-cols-2 grid-rows-2 gap-4">
 						<div className="  md:row-span-2">
-							<h4 className="absolute text-2xl m-5 p-2 text-black bg-white">
+							<h1 className="absolute text-2xl m-5 p-2 text-black bg-white">
 								BAKER
-							</h4>
+							</h1>
 							<img
 								src="https://images.unsplash.com/photo-1600961459395-62759980991e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MzR8fGNoZWZ8ZW58MHx8MHx8fDA%3D"
 								alt="BAKER"

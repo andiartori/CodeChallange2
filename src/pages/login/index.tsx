@@ -1,6 +1,6 @@
 import { useRouter } from "next/router";
 import { useState } from "react";
-import React, { FormEvent } from "react"
+import React, { FormEvent } from "react";
 
 export default function Login() {
 	const router = useRouter();
@@ -16,7 +16,9 @@ export default function Login() {
 				router.push("/listMenu");
 			}, 3000);
 		} else {
-			setError("Incorrect password! ,  you will shortly prompted to About Page");
+			setError(
+				"Incorrect password! ,  you will shortly prompted to About Page"
+			);
 			setTimeout(() => {
 				router.push("/about");
 			}, 2000);
@@ -26,12 +28,9 @@ export default function Login() {
 	if (isSuccess) {
 		return (
 			<div className="flex justify-center items-center h-screen">
-				<img
-					src="https://i.pinimg.com/474x/a6/d9/9c/a6d99c95e5ebb3b4e7150f071e0a87f1.jpg"
-					alt="Success"
-				/>
+				<img src="OpenTheDoor.jpg" alt="Success" />
 				<div>
-					<h3>PLEASE COME IN...</h3>
+					<h1>PLEASE COME IN...</h1>
 				</div>
 			</div>
 		);
@@ -40,10 +39,7 @@ export default function Login() {
 	return (
 		<div className="flex justify-center items-center h-screen">
 			<div>
-				<img
-					src="https://i.pinimg.com/736x/1b/b0/dd/1bb0dd4856c20f9216f426c33fec544c.jpg"
-					alt="Welcome"
-				/>
+				<img src="Security.jpg" alt="Welcome" />
 			</div>
 			<div className="w-full max-w-xs">
 				<form

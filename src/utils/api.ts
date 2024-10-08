@@ -45,72 +45,69 @@ export async function addAndPublishMenuEntry(
 	spaceId: string,
 	environmentId: string,
 	entryData: {
-	  name: string;
-	  description: string;
-	  price: number;
-	  category: string[];
-	  isAvailable: boolean;
-	  imageId: string;
+		name: string;
+		description: string;
+		price: number;
+		category: string[];
+		isAvailable: boolean;
+		imageId: string;
 	},
 	delay: number = 5000 // Default delay of 1 second
-  ) {
+) {
 	// Step 1: Create the entry
 	const createResponse = await cmsApi.post(
-	  `/spaces/${spaceId}/environments/${environmentId}/entries`,
-	  {
-		fields: {
-		  name: {
-			'en-US': entryData.name,
-		  },
-		  description: {
-			'en-US': entryData.description,
-		  },
-		  price: {
-			'en-US': entryData.price,
-		  },
-		  category: {
-			'en-US': entryData.category,
-		  },
-		  isAvailable: {
-			'en-US': entryData.isAvailable,
-		  },
-		  image: {
-			'en-US': {
-			  sys: {
-				type: 'Link',
-				linkType: 'Asset',
-				id: entryData.imageId,
-			  },
+		`/spaces/${spaceId}/environments/${environmentId}/entries`,
+		{
+			fields: {
+				name: {
+					"en-US": entryData.name,
+				},
+				description: {
+					"en-US": entryData.description,
+				},
+				price: {
+					"en-US": entryData.price,
+				},
+				category: {
+					"en-US": entryData.category,
+				},
+				isAvailable: {
+					"en-US": entryData.isAvailable,
+				},
+				image: {
+					"en-US": {
+						sys: {
+							type: "Link",
+							linkType: "Asset",
+							id: entryData.imageId,
+						},
+					},
+				},
 			},
-		  },
 		},
-	  },
-	  {
-		headers: {
-		  Authorization: `Bearer ${CMS_MANAGEMENT_TOKEN}`,
-		  'Content-Type': 'application/vnd.contentful.management.v1+json',
-		  'X-Contentful-Content-Type': 'menu', // Replace 'menu' with your actual content type ID
-		},
-	  }
+		{
+			headers: {
+				Authorization: `Bearer ${CMS_MANAGEMENT_TOKEN}`,
+				"Content-Type": "application/vnd.contentful.management.v1+json",
+				"X-Contentful-Content-Type": "menu", // Replace 'menu' with your actual content type ID
+			},
+		}
 	);
-  
+
 	const entry = createResponse.data;
-  
-	// Step 2: Introduce a delay before publishing the entry
+
 	await new Promise((resolve) => setTimeout(resolve, delay));
-  
-	// Step 3: Publish the entry using the returned sys.version
+
 	const publishResponse = await cmsApi.put(
-	  `/spaces/${spaceId}/environments/${environmentId}/entries/${entry.sys.id}/published`,
-	  {},
-	  {
-		headers: {
-		  Authorization: `Bearer ${CMS_MANAGEMENT_TOKEN}`,
-		  'X-Contentful-Version': entry.sys.version, // Use version from the create response
-		},
-	  }
+		`/spaces/${spaceId}/environments/${environmentId}/entries/${entry.sys.id}/published`,
+		{},
+		{
+			headers: {
+				Authorization: `Bearer ${CMS_MANAGEMENT_TOKEN}`,
+				"X-Contentful-Version": entry.sys.version,
+			},
+		}
 	);
-  
+
 	return publishResponse.data;
-  }
-  
+}
