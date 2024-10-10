@@ -5,9 +5,11 @@ function FooterComponent() {
 		<footer className="bg-black text-white py-8">
 			<div className="container mx-auto flex flex-col md:flex-row justify-between items-center">
 				{/* Company Info */}
-				<div className="mb-4 md:mb-0 flex flex-col items-center justify-center">
+				<div className="sm:mb-4 md:mb-0 flex flex-col items-center justify-center">
 					<h2 className="md:ml-0 text-xl font-bold">Coffee&Sweets</h2>
-					<p>Delicious coffee and sweet treats to brighten your day.</p>
+					<p className="text-sm md:text-l ">
+						Delicious coffee and sweet treats to brighten your day.
+					</p>
 				</div>
 
 				{/* Social Media Links */}
@@ -25,7 +27,7 @@ function FooterComponent() {
 
 			{/* Copyright */}
 			<div className="text-center mt-8 border-t border-gray-700 pt-4">
-				<p>&copy; 2024 Coffee/Sweets. All rights reserved Ver.0.0.1</p>
+				<p>&copy; 2024 Coffee/Sweets. All rights reserved Ver.0.1.2.BugFixed</p>
 			</div>
 		</footer>
 	);

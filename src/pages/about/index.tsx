@@ -13,7 +13,8 @@ function About() {
 
 	return (
 		<>
-			<Header>
+		<div className="overflow-x-hidden">
+		<Header>
 				<title>COFFEESWEET-ABOUT</title>
 			</Header>
 			<div>
@@ -32,7 +33,7 @@ function About() {
 					className="md:mx-10 flex flex-col items-center mt-10 md:mt-32 mb-10 text-justify h-96 object-fill"
 					style={{
 						backgroundImage: `url(https://img.freepik.com/free-photo/cup-coffee-with-roasted-coffee-beans_23-2150698823.jpg)`,
-						backgroundPosition: "center", // Adjusts background position for all views
+						backgroundPosition: "center"
 					}}
 				>
 					<div className="text-4xl text-white mt-5 md:mt-16">
@@ -49,14 +50,14 @@ function About() {
 				</div>
 
 				<div
-					className="text-3xl text-black mt-40 flex justify-center md:justify-center"
+					className="text-2xl sm:text-3xl text-black mt-40 flex justify-center md:justify-center"
 					id="slider"
 				>
 					Where Do We Come From ?
 				</div>
 				<div className=" mx-0 md:mt-5 bg-slate-200 md:mx-10 hover: transition ease-in-out delay-150  ">
 					<div className="mx-5 overflow-x-auto snap-x snap-mandatory scroll-pl-6 scroll-smooth mt-10 md:mx-10">
-						<div className="flex space-x-4 ">
+						<div className="flex space-x-4 items-center ">
 							<div className=" snap-center shrink-0 w-full md:snap-center md:shrink-0 md:w-1/2 m-5 hover:-translate-y-1 ">
 								<img
 									src="About1_1_11zon.jpg"
@@ -204,6 +205,8 @@ function About() {
 					<FooterComponent />
 				</div>
 			</div>
+		</div>
+
 		</>
 	);
 }

@@ -16,7 +16,6 @@ const spaceId = "77u4ydaftcug";
 const environmentId = "master";
 
 function ListMenu() {
-	// Capitalize the function name
 	const queryClient = useQueryClient();
 
 	const { data, error, isLoading } = useQuery({
@@ -28,7 +27,7 @@ function ListMenu() {
 		name: "",
 		description: "",
 		price: "",
-		category: "coffee", // Default category
+		category: "coffee",
 		isAvailable: false,
 		imageId: "",
 	});
@@ -91,7 +90,7 @@ function ListMenu() {
 			confirmButtonText: "Yes, delete it!",
 		}).then((result) => {
 			if (result.isConfirmed) {
-				// Call the delete mutation function if confirmed
+				// Panggil delete muation
 				deleteMenuMutation.mutate(entryId);
 				Swal.fire("Deleted!", "Your entry has been deleted.", "success");
 			}
@@ -140,7 +139,7 @@ function ListMenu() {
 				<title>LIST MENU </title>
 			</Header>
 			<div>
-				<div className="mt-8 md:mt-0">
+				<div className="mt-8 md:mt-0 w-screen">
 					<NavbarComponent
 						home="Home"
 						about="About"
@@ -154,9 +153,13 @@ function ListMenu() {
 				{/* TABLE INPUT DASHBOARD DIMULAI DARI SINI */}
 
 				<div className="container mx-auto p-8 bg-white">
-					<h1 className="text-2xl font-bold mb-6 ">Welcome Pak Horus</h1>
+					<h1 className="flex justify-center text-4xl font-bold mb-6 ">
+						Welcome Pak Horus
+					</h1>
 					<div className="mb-4">
-						<h2 className="text-xl font-bold mb-4">Add New Menu</h2>
+						<h2 className="text-xl font-bold mb-4 flex justify-center ">
+							Add New Menu
+						</h2>
 						<form
 							onSubmit={handleAddMenu}
 							className="grid grid-cols-2 gap-4 mb-8"
@@ -197,6 +200,7 @@ function ListMenu() {
 								required
 								className="border border-gray-400 p-2 rounded"
 							/>
+
 							<select
 								name="category"
 								value={newMenu.category}
@@ -224,9 +228,15 @@ function ListMenu() {
 								Add Menu
 							</button>
 						</form>
+						<div>
+							<p>FOR DEFAULT IMAGE, PLEASE PUT ID 5DhF0aSLYWXCMUwV36dOOA</p>
+						</div>
 					</div>
 
 					{/* TABLE and MAPPING DIMULAI DARI SINI */}
+					<h2 className="text-xl font-bold mb-4 flex justify-center ">
+						Table List Menu
+					</h2>
 					<table className="min-w-full text-black border border-gray-600">
 						<thead>
 							<tr className="bg-black text-white">

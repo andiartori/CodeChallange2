@@ -35,7 +35,7 @@ function NavbarComponent({ home, about, teams, ourMenus, title }: NavProps) {
 	return (
 		<div className="flex flex-col mt-5  bg-white">
 			{/* Title section */}
-			<h1 className="flex justify-center text-4xl md:text-6xl font-bold text-black mb-4 items-center">
+			<h1 className=" flex justify-center text-3xl  sm:flex sm:justify-center sm:text-4xl md:text-6xl font-bold text-black mb-4 items-center">
 				{title}
 			</h1>
 

@@ -12,7 +12,8 @@ const SweetTeamComponent = React.lazy(
 function Teams() {
 	return (
 		<>
-			<Header>
+		<div className="overflow-x-hidden" >
+		<Header>
 				<title>COFFEESWEET-TEAMS</title>
 			</Header>
 			<div>
@@ -82,6 +83,8 @@ function Teams() {
 					<FooterComponent />
 				</div>
 			</div>
+		</div>
+			
 		</>
 	);
 }

@@ -39,7 +39,7 @@ function CoffeeTeamComponent() {
 								<span className="title-font font-medium text-black text-2xl">
 									{`${data.name.first} ${data.name.last}`}
 								</span>
-								<span className="text-black text-xl">{data.email}</span>
+								<span className="text-sm sm:text-l md:text-black md:text-xl">{data.email}</span>
 							</span>
 						</p>
 					</div>

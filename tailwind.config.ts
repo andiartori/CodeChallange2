@@ -16,7 +16,7 @@ const config: Config = {
 				background: "var(--background)",
 				foreground: "var(--foreground)",
 			},
-			// Adding marquee keyframes and animation
+			// Marquee Animation
 			keyframes: {
 				marquee: {
 					"0%": { transform: "translateX(100%)" },

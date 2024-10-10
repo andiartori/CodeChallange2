@@ -1,9 +1,6 @@
 import React from "react";
 import { MenuProps } from "@/utils/interface";
 
-
-
-
 function CardMenu({ image, name, description, price }: MenuProps) {
 	const formattedPrice = new Intl.NumberFormat("id-ID", {
 		style: "currency",
@@ -11,7 +8,7 @@ function CardMenu({ image, name, description, price }: MenuProps) {
 		minimumFractionDigits: 0, // No decimal places for Rupiah
 	}).format(price);
 	return (
-		<div className="max-w-sm rounded overflow-hidden shadow-lg m-4">
+		<div className=" m-0 md:max-w-sm rounded overflow-hidden shadow-lg md:m-4">
 			{/* Image */}
 			<img className="w-full h-60 object-cover" src={image} alt={name} />
 
